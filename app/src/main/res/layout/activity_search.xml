@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="40dp"
+        tools:context=".Search">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3E5AF8"
+            android:paddingLeft="50px"
+            android:paddingTop="15px"
+            android:paddingRight="50px"
+            android:paddingBottom="15px"
+            android:shadowColor="#FFFCFC"
+            android:text="Board Us"
+            android:textColor="#F4EFEF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#F8F5F5"
+            android:textColorLink="#FFFFFF"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
