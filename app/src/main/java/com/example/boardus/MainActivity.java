@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         ImageAdapter adapter = new ImageAdapter(this);
         viewPager.setAdapter(adapter);
 
-        btnLogin = (Button) findViewById(R.id.Login3);
+        btnLogin = (Button) findViewById(R.id.login2);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
