@@ -16,14 +16,9 @@ public class OwnerRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_registration);
         submit1 = (Button) findViewById(R.id.Signup1);
-        submit1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent( OwnerRegistration. this, Search.class);
-                startActivity(i);
 
-            }
-        });
+
+
 
 
     }
