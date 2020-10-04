@@ -85,7 +85,7 @@ public class OwnerRegistration extends AppCompatActivity {
                 loadingbar2.setCanceledOnTouchOutside(false);
                 loadingbar2.show();
 
-              //  ValidateOwnerPhone(ownername, ownerphoneno, ownermap, ownernofbeds, ownerprice, ownerdescription, ownerpassword);
+                ValidateOwnerPhone(ownername, ownerphoneno, ownermap, ownernofbeds, ownerprice, ownerdescription, ownerpassword);
 
             }
         }

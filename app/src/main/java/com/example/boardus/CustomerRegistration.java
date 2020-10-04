@@ -117,7 +117,7 @@ public class CustomerRegistration extends AppCompatActivity {
                     Toast.makeText(CustomerRegistration.this,"This phone number already exists",Toast.LENGTH_SHORT).show();
                     loadingbar.dismiss();
 
-                    Intent i = new Intent(CustomerRegistration.this, MainActivity.class);
+                    Intent i = new Intent(CustomerRegistration.this, CustomerRegistration.class);
                     startActivity(i);
                 }
             }

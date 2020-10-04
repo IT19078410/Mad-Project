@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSignUp;
     private Button btnOwner;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ImageAdapter adapter = new ImageAdapter(this);
         viewPager.setAdapter(adapter);
 
-        btnLogin = (Button) findViewById(R.id.login2);
+        btnLogin = (Button) findViewById(R.id.submit3);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
