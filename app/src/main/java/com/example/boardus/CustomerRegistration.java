@@ -78,12 +78,12 @@ public class CustomerRegistration extends AppCompatActivity {
             loadingbar.setCanceledOnTouchOutside(false);
             loadingbar.show();
 
-            ValidateEmail(name, phoneno, password);
+            ValidatePhone(name, phoneno, password);
 
         }
     }
 
-    private void ValidateEmail(final String name, final String phoneno, final String password) {
+    private void ValidatePhone(final String name, final String phoneno, final String password) {
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
@@ -114,10 +114,10 @@ public class CustomerRegistration extends AppCompatActivity {
                                 }
                             });
                 }else{
-                    Toast.makeText(CustomerRegistration.this,"This email already exists",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CustomerRegistration.this,"This phone number already exists",Toast.LENGTH_SHORT).show();
                     loadingbar.dismiss();
 
-                    Intent i = new Intent(CustomerRegistration.this, MainActivity.class);
+                    Intent i = new Intent(CustomerRegistration.this, CustomerRegistration.class);
                     startActivity(i);
                 }
             }
