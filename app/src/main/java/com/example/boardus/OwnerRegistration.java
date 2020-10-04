@@ -34,10 +34,7 @@ public class OwnerRegistration extends AppCompatActivity {
         submit1 = (Button) findViewById(R.id.Register1);
         oname=(EditText) findViewById(R.id.editTextTextPersonName);
         ophoneno=(EditText) findViewById(R.id.phoneno);
-        map=(EditText) findViewById(R.id.map1);
-        nofbeds=(EditText) findViewById(R.id.editTextTextPersonName7);
-        price=(EditText) findViewById(R.id.editTextTextPersonName3);
-        description=(EditText) findViewById(R.id.editTextTextPersonName6);
+
         opassword=(EditText) findViewById(R.id.editTextTextPassword);
         ocpassword=(EditText) findViewById(R.id.editTextTextPassword2);
         loadingbar2 = new ProgressDialog(this);
@@ -57,24 +54,13 @@ public class OwnerRegistration extends AppCompatActivity {
         {
             String ownername = oname.getText().toString();
             String ownerphoneno = ophoneno.getText().toString();
-            String ownermap = map.getText().toString();
-            String ownernofbeds = nofbeds.getText().toString();
-            String ownerprice = price.getText().toString();
-            String ownerdescription = description.getText().toString();
             String ownerpassword = opassword.getText().toString();
 
             if (TextUtils.isEmpty(ownername)) {
                 Toast.makeText(this, "Insert name", Toast.LENGTH_SHORT).show();
             } else if (TextUtils.isEmpty(ownerphoneno)) {
                 Toast.makeText(this, "Insert phone number", Toast.LENGTH_SHORT).show();
-            } else if (TextUtils.isEmpty(ownermap)) {
-                Toast.makeText(this, "Insert map link", Toast.LENGTH_SHORT).show();
-            } else if (TextUtils.isEmpty(ownernofbeds)) {
-                Toast.makeText(this, "Insert number of beds", Toast.LENGTH_SHORT).show();
-            }else if (TextUtils.isEmpty(ownerprice)) {
-                Toast.makeText(this, "Insert price", Toast.LENGTH_SHORT).show();
-            }else if (TextUtils.isEmpty(ownerdescription)) {
-                Toast.makeText(this, "Insert description", Toast.LENGTH_SHORT).show();
+
             }else if (TextUtils.isEmpty(ownerpassword)) {
                 Toast.makeText(this, "Insert password", Toast.LENGTH_SHORT).show();
             }
@@ -85,7 +71,7 @@ public class OwnerRegistration extends AppCompatActivity {
                 loadingbar2.setCanceledOnTouchOutside(false);
                 loadingbar2.show();
 
-                ValidateOwnerPhone(ownername, ownerphoneno, ownermap, ownernofbeds, ownerprice, ownerdescription, ownerpassword);
+                ValidateOwnerPhone(ownername, ownerphoneno, ownerpassword);
 
             }
         }
@@ -93,7 +79,7 @@ public class OwnerRegistration extends AppCompatActivity {
 
     }
 
-    private void ValidateOwnerPhone(final String ownername, final String ownerphoneno, final String ownermap, final String ownernofbeds, final String ownerprice, final String ownerdescription, final String ownerpassword) {
+    private void ValidateOwnerPhone(final String ownername, final String ownerphoneno, final String ownerpassword) {
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
@@ -104,10 +90,7 @@ public class OwnerRegistration extends AppCompatActivity {
                     HashMap<String, Object> ownerdatamap = new HashMap<>();
                     ownerdatamap.put("name",ownername);
                     ownerdatamap.put("phoneNo",ownerphoneno);
-                    ownerdatamap.put("maplink",ownermap);
-                    ownerdatamap.put("nofbeds",ownernofbeds);
-                    ownerdatamap.put("price",ownerprice);
-                    ownerdatamap.put("description",ownerdescription);
+
                     ownerdatamap.put("password",ownerpassword);
 
                     RootRef.child("Owners").child(ownerphoneno).updateChildren(ownerdatamap)
