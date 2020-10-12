@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class OwnerRegistration extends AppCompatActivity {
+public class AdminFeedBack extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_owner_registration);
+        setContentView(R.layout.activity_admin_feed_back);
     }
 }

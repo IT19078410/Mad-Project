@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CustomerRegistration">
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/password3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -55,7 +55,7 @@
         app:srcCompat="@drawable/profile" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/cname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.4" />
 
     <EditText
-        android:id="@+id/editTextPhoneNumber1"
+        android:id="@+id/phoneno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -93,7 +93,7 @@
         app:layout_constraintVertical_bias="0.6" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/password2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
